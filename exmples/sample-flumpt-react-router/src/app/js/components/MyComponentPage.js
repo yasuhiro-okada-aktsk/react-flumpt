@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import {connect} from 'react-flumpt';
 //import {connect} from '../../../../../../lib/index';
 
 class MyComponentPage extends React.Component {
+  static propTypes = {
+    count: PropTypes.number.isRequired,
+  };
+
   componentDidMount() {
-    //const {dispatch} = this.props;
-    //dispatch("increment");
   }
   
   render() {
