@@ -155,14 +155,12 @@ export function connect(mapStateToProps, mergeProps, options = {}) {
       trySubscribe() {
         if (shouldSubscribe) {
           this.emitter.on(":process-updating", this.handleChange);
-          this.emitter.on(":end-anync-updating", this.handleChange);
           this.handleChange()
         }
       }
 
       tryUnsubscribe() {
         this.emitter.removeListener(":process-updating", this.handleChange);
-        this.emitter.removeListener(":end-anync-updating", this.handleChange);
       }
 
       componentDidMount() {
